@@ -1,0 +1,100 @@
+/* styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c; /* Dark background color for dark theme */
+    color: #fff; /* Light text color for dark theme */
+}
+
+#app {
+    max-width: 800px; /* Increased max-width for more space */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333; /* Darker background for container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #444; /* Darker background for input */
+    color: #fff;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#results-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movie {
+    flex: 0 1 calc(25% - 20px); /* Four movies per row with 20px margin */
+    border: 1px solid #555;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #444; /* Darker background for movie card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie:hover {
+    transform: scale(1.02);
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #555;
+}
+
+.movie h2 {
+    margin: 10px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.movie p {
+    margin: 10px;
+    color: #ccc; /* Lighter text color for movie details */
+}
+
+/* Media Queries for responsiveness */
+
+@media only screen and (max-width: 600px) {
+    input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .movie {
+        flex: 0 1 calc(50% - 20px); /* Two movies per row on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .movie {
+        flex: 0 1 calc(100% - 20px); /* One movie per row on even smaller screens */
+    }
+}

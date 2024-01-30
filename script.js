@@ -1,8 +1,9 @@
-const apiKey = '3e28a0c7'; // Replace with your OMDb API key
+ // Replace with your OMDb API key
 const searchInput = $('#search-input');
 const resultsContainer = $('#results-container');
 
 function searchMovies() {
+    const apiKey = '3e28a0c7';
     const searchTerm = searchInput.val();
 
     if (searchTerm.trim() === '') {
@@ -10,7 +11,7 @@ function searchMovies() {
         return;
     }
 
-    const apiUrl = `http://www.omdbapi.com/?apikey=3e28a0c7&s=${searchTerm}`;
+    const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`;
 
     $.get(apiUrl, (data) => {
         if (data.Response === 'True') {

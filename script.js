@@ -1,4 +1,4 @@
-const apiKey = '3e28a0c7'; // Replace with your OMDb API key
+const apiKey = "3e28a0c7"; // Replace with your OMDb API key
 const searchInput = $('#search-input');
 const resultsContainer = $('#results-container');
 
